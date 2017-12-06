@@ -17,6 +17,18 @@ module.exports = merge(webpackBaseConfig, {
         filename: '[name].js',
         chunkFilename: '[name].chunk.js'
     },
+    // devServer:{
+    //     proxy:{
+    //         '/api':{
+    //             target:'http://',
+    //             changeOrigin:true,
+    //             pathRewrite:{
+    //                 '^/api':''
+    //             }
+    //         }
+    //     }
+    // },
+
     plugins: [
         new ExtractTextPlugin({
             filename: '[name].css',
@@ -30,6 +42,12 @@ module.exports = merge(webpackBaseConfig, {
             filename: '../index.html',
             template: './src/template/index.ejs',
             inject: false
-        })
+        }),
+        // new webpack.DefinePlugin({
+        //     'process.env':{
+        //         NODE_ENV:'development',
+        //         API_ROOT:'/apitest'
+        //     }
+        // })
     ]
 });
