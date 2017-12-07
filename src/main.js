@@ -5,14 +5,17 @@ import Routers from './router';
 import Util from './libs/util';
 import App from './app.vue';
 import 'iview/dist/styles/iview.css';
-// import axios from 'axios'
 
-// Vue.prototype.$http = axios;
+// const common=require('')
+
+import axios from 'axios'
+
+Vue.prototype.$http = axios;
 
 Vue.use(VueRouter);
 Vue.use(iView);
 
-// this.$http.get(URL).then(response => {
+// this.$http.get().then(response => {
 //     // success callback
 // }, response => {
 //     // error callback
