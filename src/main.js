@@ -5,8 +5,7 @@ import Routers from './router';
 import Util from './libs/util';
 import App from './app.vue';
 import 'iview/dist/styles/iview.css';
-
-// const common=require('')
+import login from './api/sudent.js'
 
 import axios from 'axios'
 
@@ -15,11 +14,8 @@ Vue.prototype.$http = axios;
 Vue.use(VueRouter);
 Vue.use(iView);
 
-// this.$http.get().then(response => {
-//     // success callback
-// }, response => {
-//     // error callback
-// })
+
+// Vue.prototype.$http.post('/api/login',login.login);
 
 
 // 路由配置

@@ -6,7 +6,7 @@ axios({
 })
 let config = {
     env: Env,
-    API_ROOT:'http://129.1.18.189:9090/ES_Building',
+    API_ROOT:'http://129.1.18.118:9090/ES_Building',
     port:8080,
     autoOpenBrower:true,
     assetsSubDirectory:'static',

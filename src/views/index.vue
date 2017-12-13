@@ -39,22 +39,25 @@
     .bg-color {
         background-color: rgba(9, 19, 31, .5);
         height: 100%;
-        padding:15px;
+        padding: 15px;
     }
 
     .bg-margin {
         margin: 5px;
     }
-    .bg-border{
+
+    .bg-border {
         border: 1px solid #44ccf3;
         border-radius: 3px;
         box-shadow: 0 1px 6px #b8effb;
         height: 100%;
     }
-    .bg-padding{
-        padding:15px;
+
+    .bg-padding {
+        padding: 15px;
     }
-    .card-bg-color{
+
+    .card-bg-color {
         background-color: rgba(255, 255, 255, 0);
         color: #fff;
     }
@@ -62,7 +65,7 @@
 <template>
     <div class="index">
         <Row type="flex" justify="center" align="middle" class='bg-image'>
-            <Col span="6" class="bg-color" >
+            <Col span="6" class="bg-color">
             <div class="bg-border">
                 <template>
                     <Card class="card-bg-color">
@@ -90,8 +93,8 @@
                 <!--<img src="../images/logo.png">-->
                 <!--</h1>-->
                 <!--<h2>-->
-                <!--<p>Welcome to your iView demo sssaaa app!</p>-->
-                <!--<Button type="ghost" @click="handleStart">Start iView</Button>-->
+                <p>Welcome to your iView demo sssaaa app!</p>
+                <Button type="ghost" @click="handleStart">Start iView</Button>
                 <!--</h2>-->
             </div>
             </Col>

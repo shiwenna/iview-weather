@@ -2,27 +2,29 @@
  * Created by Twinna on 2017/12/4.
  */
 import axios from 'axios';
-import iView from 'iview';
+// import Vue from 'vue';
 
-import process from '../config';
-Vue.prototype.$http = axios
-//ajax
+// import iView from 'iview';
+
+import process from '../config/config';
+// Vue.prototype.$http = axios
+// ajax
 let instance = axios.create({
     baseURL: process.API_ROOT,
     timeout: 30000,
     // headers:{''}
 });
 // instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
-instance.get('/longRequest', {
-    timeout: 5000
-});
+// instance.get('/longRequest', {
+//     timeout: 5000
+// });
 //添加请求拦截器
 instance.interceptors.request.use(function (config) {
     // iView.LoadingBar.stat();
     // let user = JSON.parse();
     // !config.params && (config.params = {});
     // if (config.method === 'get' && user && user.univ_id) {
-        config.params.univ_id = '44444';
+        config.headers.token = '44444';
     // }
     return config;
 });
@@ -38,3 +40,4 @@ instance.interceptors.response.use(res => {
         return Promise.reject(error)
     }
 );
+export default instance
