@@ -13,7 +13,6 @@ Vue.prototype.$http = axios;
 
 Vue.use(VueRouter);
 Vue.use(iView);
-
 // Vue.prototype.$http.post('/api/login',login.login);
 
 // 路由配置
